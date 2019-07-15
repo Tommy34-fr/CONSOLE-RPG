@@ -3,7 +3,7 @@ public abstract class Monstre{
 	protected static String name;
 	protected int pvBaseMax;
 	protected static int forceBase;
-	protected int agiBase;
+	protected static int agiBase;
 	protected static int intelBase;
 	
 	
@@ -14,7 +14,7 @@ public abstract class Monstre{
 		Monstre.name = name;
 		this.pvBaseMax = pvBaseMax;
 		Monstre.forceBase = forceBase;
-		this.agiBase = agiBase;
+		Monstre.agiBase = agiBase;
 		Monstre.intelBase = intelBase;
 
 		Monstre.pv = pvBaseMax;
@@ -42,7 +42,7 @@ public abstract class Monstre{
 
 	}
 
-	public int getAgi() {
+	public static int getAgi() {
 		return agiBase;
 	}
 
@@ -62,9 +62,9 @@ public abstract class Monstre{
 	
 	public static int effectuerAttaquePhysique() {
 		
-		int degats = getForce() + (int) (Math.random()*6.0) + 1;
+		int degats = getForce() + ((int) (Math.random()*6.0) + 1);
 		Pj.pv = Pj.pv - degats;
-		System.out.println("L'ennemie vous a infligé "+ degats + "degats.");
+		System.out.println("L'ennemie vous a infligé "+ degats + " degats.");
 		return degats;
 		
 	}

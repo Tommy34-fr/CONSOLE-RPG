@@ -1,6 +1,6 @@
 
 public class Orc extends Monstre {
-	private static final int PV_MAX_BASE = 35;
+	private static final int PV_MAX_BASE = 50;
 	private static final int FORCE_BASE = 12;
 	private static final int AGI_BASE = 3;
 	private static final int INTEL_BASE = 1;

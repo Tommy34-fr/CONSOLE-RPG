@@ -4,7 +4,7 @@ public abstract class Pj{
 	static String choix;
 	protected static int pvBaseMax;
 	protected static int forceBase;
-	protected int agiBase;
+	protected static int agiBase;
 	protected static int intelBase;
 	protected static int multiForce;
 	protected static int multiAgi;
@@ -44,7 +44,7 @@ public abstract class Pj{
 		System.out.println("Niv   : " + perso.getLevel());
 		System.out.println("PV    : " + perso.getPv());
 		System.out.println("Force : " + Pj.getForce());
-		System.out.println("Agi   : " + perso.getAgi());
+		System.out.println("Agi   : " + Pj.getAgi());
 		System.out.println("Intel : " + Pj.getIntel());
 	}
 	
@@ -52,7 +52,7 @@ public abstract class Pj{
 		Pj.level = level;
 		Pj.pvBaseMax = pvBaseMax;
 		Pj.forceBase = forceBase;
-		this.agiBase = agiBase;
+		Pj.agiBase = agiBase;
 		Pj.intelBase = intelBase;
 		Pj.multiForce = multiForce;
 		Pj.multiAgi = multiAgi;
@@ -75,7 +75,7 @@ public abstract class Pj{
 	}
 	
 	public static int getPvMax() {
-		return pvBaseMax = pvBaseMax + (level * (10 / 100));
+		return pvBaseMax = pvBaseMax + (level * (10 / 100) * (pvBaseMax));
 	}
 
 	public int getPv() {
@@ -92,7 +92,7 @@ public abstract class Pj{
 
 	}
 
-	public int getAgi() {
+	public static int getAgi() {
 		return agiBase + level * multiAgi;
 
 	}
@@ -112,17 +112,16 @@ public abstract class Pj{
 	}
 	
 	
-	public static int effectuerAttaqueMagique() {
+	public static void effectuerAttaqueMagique() {
 		
-		int degats = getIntel() + (int) (Math.random()*6.0) + 1;
+		int degats = getIntel() + ((int) (Math.random()*6.0) + 1);
 		Monstre.pv = Monstre.pv - degats;
 		System.out.println("Vous avez infligé "+ degats + " à l'ennemie");
-		return degats;
-	
+			
 	}
 	public static int effectuerAttaquePhysique() {
 	
-		int degats = getForce() + (int) (Math.random()*6.0) + 1;
+		int degats = getForce() + ((int) (Math.random()*6.0) + 1);
 		Monstre.pv = Monstre.pv - degats;
 		System.out.println("Vous avez infligé "+ degats + " à l'ennemie");
 		return degats;

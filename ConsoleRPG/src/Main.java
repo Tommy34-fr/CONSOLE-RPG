@@ -7,6 +7,8 @@ public class Main {
 		Pj.perso = null;
 	//////////INTERFACE ACCEUILLE////////////
 		
+		
+	
 	/////////CREATION PERSONNAGE ////////////
 	
 		Pj.name();
@@ -24,9 +26,9 @@ public class Main {
 		}
 		if (partie.demarrer()) {
 			
-			System.out.println("Gagné!");
+			System.out.println("Bien Joué ! Vous avez terminé le donjon !");
 		} else {
-			System.out.println("Perdu");
+			System.out.println("Perdu, t'es une merde");
 		
 		
 

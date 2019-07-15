@@ -3,12 +3,12 @@ public class Mage extends Pj {
 
 	private static final int LEVEL = 0;
 	private static final int PV_MAX_BASE = 200;
-	private static final int FORCE_BASE = 6;
+	private static final int FORCE_BASE = 3;
 	private static final int AGI_BASE = 6;
-	private static final int INTEL_BASE = 15;
+	private static final int INTEL_BASE = 11;
 	private static final int MULTI_FORCE = 2 ;
-	private static final int MULTI_AGI = 2 ;
-	private static final int MULTI_INTELL = 5 ;
+	private static final int MULTI_AGI = 3 ;
+	private static final int MULTI_INTELL = 4 ;
 	
 	
 	public Mage() {

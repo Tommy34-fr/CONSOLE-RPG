@@ -4,7 +4,7 @@ public class Partie {
 	static int nbTours = 0;
 
 	public boolean demarrer() {
-		while (Partie.nbTours  < 15 && Pj.perso.isEnVie()) {
+		while (Partie.nbTours  < 16 && Pj.perso.isEnVie()) {
 			this.deroulerTour();
 			Partie.nbTours++;
 		}
